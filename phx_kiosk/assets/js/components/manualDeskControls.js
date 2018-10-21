@@ -38,13 +38,13 @@ class ManualDeskControls extends Component {
           </div>
         </section>
         <section className="buttons">
-          <button className="up" onMouseDown={() => onDeskPress("up")} onMouseUp={onDeskRelease}>
+          <button className="up" onTouchStart={() => onDeskPress("up")} onMouseDown={() => onDeskPress("up")} onMouseUp={onDeskRelease} onTouchEnd={onDeskRelease}>
             <Icon>keyboard_arrow_up</Icon>
           </button>
-          <button className="down" onMouseDown={() => onDeskPress("down")} onMouseUp={onDeskRelease}>
+          <button className="down" onTouchStart={() => onDeskPress("down")} onMouseDown={() => onDeskPress("down")} onTouchEnd={onDeskRelease}>
             <Icon>keyboard_arrow_down</Icon>
           </button>
-          <button className="power" onClick={() => togglePower(toggle)}>
+          <button className="power" onTouchStart={() => togglePower(toggle)} onClick={() => togglePower(toggle)}>
             <Icon>power</Icon>
           </button>
         </section>
