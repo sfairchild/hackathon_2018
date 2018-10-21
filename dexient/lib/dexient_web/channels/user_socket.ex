@@ -2,7 +2,7 @@ defmodule DexientWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", DexientWeb.RoomChannel
+  channel "hive:*", DexientWeb.HiveChannel
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After

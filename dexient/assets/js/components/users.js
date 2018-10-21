@@ -39,7 +39,15 @@ class Users extends Component {
                 </ul>
             <style jsx>{`
                 .root {
-                    max-width: 500px;
+                    max-height: 280px;
+                    overflow: scroll;
+                    padding: 0 20px;
+                }
+                h1 {
+                    font-size: 12px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    color: #0169d9;
                 }
                 ul {
                     max-height: 282px;

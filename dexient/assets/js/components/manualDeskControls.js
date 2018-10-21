@@ -46,9 +46,6 @@ class ManualDeskControls extends Component {
           <button className="power" onClick={() => togglePower(toggle)}>
             <i className="material-icons">power</i>
           </button>
-          <button className="power" onClick={() => toggleDoNotDistrub(toggle)}>
-            <i className="material-icons">notifications</i>
-          </button>
         </section>
         <style jsx>{`
           .root {

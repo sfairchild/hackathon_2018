@@ -12,19 +12,23 @@ export default class Status extends Component {
                 <span className="status">Dexient</span>
                 <style jsx>{`
                     .root {
-                        background: #fff;
                         border: 1px solid #ccc
                         border-radius: 3px;
                         display: flex;
                         align-items: center;
                         text-align: center;
-                        position: absolute;
                         width: 100%;
-                        top: 20px;
                         width: 80%;
                         margin: 0 auto;
-                        left: 0;
-                        right: 0;
+                    }
+                    i {
+                        color: #0169d9;
+                    }
+                    .status {  
+                        margin: 0 auto;
+                        color: #0169d9;
+                        font-size: 20px;
+                        padding: 15px;
                     }
                 `}</style>
             </div>
