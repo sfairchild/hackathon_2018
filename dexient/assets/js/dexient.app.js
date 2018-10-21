@@ -36,7 +36,7 @@ class Dexient extends Component {
         }
         if(this.socket) {
             this.socket.connect();
-            this.hive = this.socket.channel("hive:connect", {});
+            this.hive = this.socket.channel("home:lobby", {});
             this.hive.join().receive('ok', resp => {
                 this.setState({ connected: true });
             }).receive('error', resp => { console.log("unable to join" )})
@@ -91,6 +91,7 @@ class Dexient extends Component {
                             settings={settings}
                             connect={connect} 
                             onDeskPress={onDeskPress}
+                            on
                             toggleDND={toggleDND} 
                             togglePower={togglePower}/>  : 
                         <Off connect={this.connect}/>
