@@ -1,0 +1,62 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.9.4/libexec/bin/yarn.js add @babel/preset-plugin-proposal-class-properties -D
+
+PATH: 
+  /usr/local/opt/libxslt/bin:/Users/vibe/.asdf/shims:/Users/vibe/.asdf/shims:/Users/vibe/.asdf/bin:/Users/vibe/.npm-global:/Users/vibe/Development/android-sdk/platform-tools:/Development/android-sdk/tools:/Users/vibe/.npm-packages/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/opt/X11/bin:/Users/vibe/.npm-global:/Users/vibe/Development/android-sdk/platform-tools:/Development/android-sdk/tools:/Users/vibe/.npm-packages/bin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  10.9.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@babel%2fpreset-plugin-proposal-class-properties: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:64202:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:137468:22)
+      at Request.emit (events.js:182:13)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:138440:10)
+      at Request.emit (events.js:182:13)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:138362:12)
+      at Object.onceWrapper (events.js:273:13)
+      at IncomingMessage.emit (events.js:187:15)
+      at endReadableNT (_stream_readable.js:1085:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "repository": {},
+    "license": "MIT",
+    "scripts": {
+      "deploy": "webpack --mode production",
+      "watch": "webpack --mode development --watch"
+    },
+    "dependencies": {
+      "phoenix": "file:../deps/phoenix",
+      "phoenix_html": "file:../deps/phoenix_html",
+      "react": "^16.5.2",
+      "react-dom": "^16.5.2"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.0.0",
+      "@babel/preset-env": "^7.0.0",
+      "@babel/preset-react": "^7.0.0",
+      "babel-loader": "^8.0.0",
+      "copy-webpack-plugin": "^4.5.0",
+      "css-loader": "^0.28.10",
+      "mini-css-extract-plugin": "^0.4.0",
+      "optimize-css-assets-webpack-plugin": "^4.0.0",
+      "uglifyjs-webpack-plugin": "^1.2.4",
+      "webpack": "4.4.0",
+      "webpack-cli": "^2.0.10"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

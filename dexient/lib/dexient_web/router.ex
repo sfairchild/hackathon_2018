@@ -19,6 +19,14 @@ defmodule DexientWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/api", DexientWeb do
+    pipe_through :api
+    
+    get "/connect", ApiController, :connect
+    get "/desk/:type", ApiController, :desk
+    get "/power/:status", ApiController, :power
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", DexientWeb do
   #   pipe_through :api
