@@ -12,7 +12,7 @@ defmodule PhxKiosk.Application do
       supervisor(PhxKioskWeb.Endpoint, []),
       # Start your own worker by calling: PhxKiosk.Worker.start_link(arg1, arg2, arg3)
       # worker(PhxKiosk.Worker, [arg1, arg2, arg3]),
-      PhxKiosk.Desk
+      # PhxKiosk.Desk
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

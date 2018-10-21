@@ -28,16 +28,14 @@ defmodule PhxKioskWeb.HomeChannel do
   end
 
   def handle_in("raise_desk", _payload, socket) do
-
-    broadcast socket, "raise_desk", {}
+    broadcast socket, "raise_desk", %{}
     Desk.raise_desk()
-
     {:noreply, socket}
   end
 
   def handle_in("lower_desk", _payload, socket) do
 
-    broadcast socket, "lower_desk", {}
+    broadcast socket, "lower_desk", %{}
     Desk.lower_desk()
 
     {:noreply, socket}
@@ -45,7 +43,7 @@ defmodule PhxKioskWeb.HomeChannel do
 
   def handle_in("stop_desk", _payload, socket) do
 
-    broadcast socket, "stop_desk", {}
+    broadcast socket, "stop_desk", %{}
     Desk.stop_desk()
 
     {:noreply, socket}
@@ -53,7 +51,7 @@ defmodule PhxKioskWeb.HomeChannel do
 
   def handle_in("turn_on_desk", _payload, socket) do
 
-    broadcast socket, "power_on", {}
+    broadcast socket, "power_on", %{}
     Desk.power_on()
 
     {:noreply, socket}
@@ -61,7 +59,7 @@ defmodule PhxKioskWeb.HomeChannel do
 
   def handle_in("turn_off_desk", _payload, socket) do
 
-    broadcast socket, "power_on", {}
+    broadcast socket, "power_on", %{}
     Desk.power_off()
 
     {:noreply, socket}

@@ -7,14 +7,51 @@
     <title>Dexient</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>"/>
     <!-- TODO Figure out how to get his included via phx way -->
+      <style>
+      @font-face {
+          font-family: 'Material Icons';
+          font-style: normal;
+          font-weight: 400;
+          src: url(/images/MaterialIcons-Regular.eot); /* For IE6-8 */
+          src: local('Material Icons'),
+            local('MaterialIcons-Regular'),
+            url(/images/MaterialIcons-Regular.woff2) format('woff2'),
+            url(/images/MaterialIcons-Regular.woff) format('woff'),
+            url(/images/MaterialIcons-Regular.ttf) format('truetype');
+        }
+        .material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+        html, body, #app {
+          margin: 0;
+          padding: 0;
+        }
+      </style>
   </head>
   <body>
-    <header>
-    </header>
-    <main role="main" class="container">
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-      <%= render @view_module, @view_template, assigns %>
-    </main>
+    <div id="app"></div>
+
+    <script type="text/javascript" src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
