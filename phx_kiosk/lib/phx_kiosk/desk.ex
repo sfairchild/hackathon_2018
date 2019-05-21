@@ -1,6 +1,6 @@
 defmodule PhxKiosk.Desk do
   use GenServer
-  alias ElixirALE.GPIO
+  # alias ElixirALE.GPIO
 
   @pin_up 18
   @pin_down 16
@@ -34,37 +34,37 @@ defmodule PhxKiosk.Desk do
 
   #  Callbacks {{{ #
   def init(_) do
-    {:ok, up_pid} = GPIO.start_link(@pin_up, :output, start_value: 0)
-    {:ok, down_pid} = GPIO.start_link(@pin_down, :output, start_value: 0)
-    {:ok, power_pid} = GPIO.start_link(@power_pin, :output, start_value: 0)
-    {:ok, %{up: up_pid, down: down_pid, on: power_pid}}
+    # {:ok, up_pid} = GPIO.start_link(@pin_up, :output, start_value: 0)
+    # {:ok, down_pid} = GPIO.start_link(@pin_down, :output, start_value: 0)
+    # {:ok, power_pid} = GPIO.start_link(@power_pin, :output, start_value: 0)
+    {:ok, %{up: @pin_up, down: @pin_down, on: @power_pin}}
   end
 
   def handle_cast(:power_off, state) do
-    GPIO.write(state[:on], 0)
+    # GPIO.write(state[:on], 0)
     {:noreply, state}
   end
 
   def handle_cast(:power_on, state) do
-    GPIO.write(state[:on], 1)
+    # GPIO.write(state[:on], 1)
     {:noreply, state}
   end
 
   def handle_cast(:lower_desk, state) do
-    GPIO.write(state[:up], 0)
-    GPIO.write(state[:down], 1)
+    # GPIO.write(state[:up], 0)
+    # GPIO.write(state[:down], 1)
     {:noreply, state}
   end
 
   def handle_cast(:raise_desk, state) do
-    GPIO.write(state[:down], 0)
-    GPIO.write(state[:up], 1)
+    # GPIO.write(state[:down], 0)
+    # GPIO.write(state[:up], 1)
     {:noreply, state}
   end
 
   def handle_cast(:stop, state) do
-    GPIO.write(state[:up], 0)
-    GPIO.write(state[:down], 0)
+    # GPIO.write(state[:up], 0)
+    # GPIO.write(state[:down], 0)
     {:noreply, state}
   end
 end

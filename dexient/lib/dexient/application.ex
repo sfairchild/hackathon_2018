@@ -1,15 +1,12 @@
 defmodule Dexient.Application do
-  # See https://hexdocs.pm/elixir/Application.html
-  # for more information on OTP Applications
-  @moduledoc false
-
   use Application
 
   def start(_type, _args) do
+    import Supervisor.Spec
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      DexientWeb.Endpoint
+      supervisor(DexientWeb.Endpoint, [])
       # Starts a worker by calling: Dexient.Worker.start_link(arg)
       # {Dexient.Worker, arg},
     ]
